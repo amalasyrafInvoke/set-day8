@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SETDC - JS Video</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="up-next-video" class="nav-box" onclick="navOnClick('top')">
+        <div class="nav-text">
+          <!-- <h1>Play Video</h1> -->
+          <i class="fa fa-play"></i>
+        </div>
+      </div>
+      <div id="box">
+        <h1 id="video-title">Blackpink</h1>
+        <video
+          id="vid"
+          width="600px"
+          src="./blackpink.mp4"
+          type="video/mp4"
+          loop
+        ></video>
+
+        <div id="btn-container">
+          <div id="test" class="vid-btn">
+            <i class="fa fa-list-ul" onclick="toggleList()"></i>
+
+            <div id="video-list">
+              <h1>Video List</h1>
+              <div class="video-item" onclick="switchVid('mov_bbb.mp4', 0)">
+                <img src="images/vids-thumbnail1.png" width="150px" />
+                <div class="vid-item-text">
+                  <h3>BBB video</h3>
+                  <p>Duration: 0.10</p>
+                </div>
+              </div>
+              <div class="video-item" onclick="switchVid('blackpink.mp4', 1)">
+                <img src="images/vids-thumbnail3.png" width="150px" />
+                <div class="vid-item-text">
+                  <h3>Blackpink</h3>
+                  <p>Duration: 0.13</p>
+                </div>
+              </div>
+              <div class="video-item" onclick="switchVid('movie.mp4', 2)">
+                <img src="images/vids-thumbnail2.png" width="150px" />
+                <div class="vid-item-text">
+                  <h3>Bear video</h3>
+                  <p>Duration: 0.13</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vid-btn" onclick="updateVol(-0.1)">
+            <i class="fa fa-volume-down"></i>
+          </div>
+          <div id="switch-btn" class="vid-btn" onclick="switchPlay()">
+            <i class="fa fa-play"></i>
+          </div>
+          <div class="vid-btn" onclick="updateVol(0.1)">
+            <i class="fa fa-volume-up"></i>
+          </div>
+          <div class="vid-btn">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+      </div>
+      <div id="previous-video" class="nav-box" onclick="navOnClick('bottom')">
+        <div class="nav-text">
+          <!-- <h1>Play Video</h1> -->
+          <i class="fa fa-play"></i>
+        </div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

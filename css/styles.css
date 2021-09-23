@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background-color: #242a31;
+  height: 100%;
+}
+
+#container {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: -2px 2px 5px gray;
+  background-color: #3a4750;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#video-list {
+  width: 600px;
+  height: 80%;
+  border-radius: 25px;
+  box-shadow: -2px 2px 5px gray;
+  background-color: #3a4750;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  position: relative;
+}
+
+#box h1 {
+  color: #f3efcc;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+#vid {
+  width: 97%;
+  height: 70%;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+
+#btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.vid-btn {
+  width: 70px;
+  height: 50px;
+  color: #eeeeee;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  margin: 1rem 0.8rem;
+  transition: all 0.7s;
+}
+
+.vid-btn:hover {
+  box-shadow: -5px 2px 10px gray;
+}
+
+.nav-box {
+  height: 50px;
+  width: 97%;
+  font-size: 1.5rem;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.75s;
+  position: relative;
+}
+
+.nav-box::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.nav-box:hover {
+  height: 200px;
+}
+
+.nav-text > * {
+  display: none;
+}
+
+.nav-box:hover .nav-text > * {
+  display: block;
+  /* color: black; */
+}
+
+.nav-box:hover .nav-text {
+  opacity: 0.5;
+}
+
+.nav-box:hover .nav-text:hover {
+  opacity: 1;
+  font-size: 2rem;
+}
+
+#up-next-video {
+  background-image: url(../images/vids-thumbnail1.png);
+  background-size: cover;
+  background-position: bottom center;
+}
+
+#previous-video {
+  background-image: url(../images/vids-thumbnail2.png);
+  background-size: cover;
+  background-position: top center;
+}
+
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: none;
+}
+
+.video-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 0.75s;
+}
+
+.video-item > * {
+  margin: 0.5rem 1.5rem;
+}
+
+.video-item:hover {
+  transform: scale(1.2);
+}
+
+.animateTop {
+  animation-name: animateTop ;
+  animation-duration: 2s;
+}
+
+@keyframes animateTop {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animateBottom {
+  animation-name: animateBottom;
+  animation-duration: 2s;
+}
+
+@keyframes animateBottom {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

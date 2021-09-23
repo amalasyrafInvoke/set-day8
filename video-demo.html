@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Video</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/demo-styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="box">
+        <video
+          id="vid"
+          width="600px"
+          src="./mov_bbb.mp4"
+          type="video/mp4"
+          controls
+          loop
+          muted
+        ></video>
+
+        <div id="btn-container">
+          <div class="vid-btn" onclick="playVid()">Play</div>
+          <div class="vid-btn" onclick="pauseVid()">Pause</div>
+          <!-- <div class="vid-btn" onclick="minVol()">Vol --</div>
+        <div class="vid-btn" onclick="maxVol()">Vol ++</div> -->
+          <div class="vid-btn" onclick="updateVol(-0.1)">Vol --</div>
+          <div class="vid-btn" onclick="updateVol(0.1)">Vol ++</div>
+        </div>
+
+        <div id="switch-btn" class="vid-btn" onclick="switchPlay()">
+          <i class="fa fa-play"></i>
+        </div>
+
+        <div id="playlist-container">
+          <div class="vid-btn" onclick="switchVid('mov_bbb.mp4')">BBB</div>
+          <div class="vid-btn" onclick="switchVid('movie.mp4')">Bear</div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/video-demo-script.js"></script>
+  </body>
+</html>

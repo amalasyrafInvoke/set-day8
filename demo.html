@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS IF Else</title>
+    <link rel="stylesheet" href="./css/demo-styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="box">
+        <h1>0</h1>
+        <div id="btn-container">
+          <div class="btn" onclick="count(-1)">-</div>
+          <div class="btn" onclick="count(1)">+</div>
+        </div>
+        <div id="color-btn-container">
+          <!-- <div
+            class="btn color-btn"
+            onclick="changeBG('blue')"
+            onmouseover="overBtn()"
+            onmouseout="outBtn()"
+            onmousedown="downBtn()"
+          >
+            Blue
+          </div> -->
+          <div class="btn" onclick="changeBG('blue')" id="blue-btn">Blue</div>
+          <div class="btn" onclick="changeBG('red')" id="red-btn">Red</div>
+          <div class="btn" onclick="changeBG('green')" id="green-btn">
+            Green
+          </div>
+          <div class="btn" onclick="defaultOnClick()">Default</div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/demo-script.js"></script>
+  </body>
+</html>
